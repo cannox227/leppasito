@@ -66,18 +66,36 @@
 </head>
 
 <body>
-    <h1>Welcome to LeppaCasa Oy</h1>
-    <img src="/media/frittomisto.jpg" alt="Fritto Misto">
+    <h1 id="play-splash">Welcome to LeppaCasa Oy</h1>
+    <img src="/media/frittomisto.jpg" alt="Fritto Misto" id="play-buonasera">
     <h2><i>Experience the Taste of Authentic Fritto Misto</i></h2>
-    <p id="helsinki-time"></p>
+    <p id="helsinki-time">In <span id="play-striscia">Helsinki</span> it's <span id="helsinki-time-display"></span></p>
+
     <footer>Built with love and <a href="https://github.com/cannox227/leppasito">Fritto Misto</a></footer>
+    <audio id="audio-player-1" src="media/buonasera_gerry.mp3"></audio>
+    <audio id="audio-player-2" src="media/slpash.mp3"></audio>
+    <audio id="audio-player-3" src="media/striscia.mp3"></audio>
     <script>
         function updateHelsinkiTime() {
             const options = { timeZone: 'Europe/Helsinki', hour: '2-digit', minute: '2-digit' };
             const helsinkiTime = new Intl.DateTimeFormat('en-US', options).format(new Date());
-            document.getElementById('helsinki-time').textContent = `In Helsinki it's ${helsinkiTime}`;
+            document.getElementById('helsinki-time-display').textContent = helsinkiTime;
         }
         updateHelsinkiTime();
+
+        function setupAudioPlayback(audioElementId, triggerElementId) {
+            const audioPlayer = document.getElementById(audioElementId);
+            const triggerElement = document.getElementById(triggerElementId);
+
+            triggerElement.addEventListener('click', () => {
+                audioPlayer.play();
+            });
+        }
+
+        setupAudioPlayback('audio-player-1', 'play-buonasera');
+        setupAudioPlayback('audio-player-2', 'play-splash');
+        setupAudioPlayback('audio-player-3', 'play-striscia');
+
     </script>
 </body>
 

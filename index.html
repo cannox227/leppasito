@@ -15,14 +15,25 @@
 
         body {
             background-color: #2c3e50;
-            height: 100vh;
+            min-height: 100vh;
+            /* fill screen */
+            display: flex;
+            flex-direction: column;
+            font-family: 'Comic Sans MS', 'Comic Sans', 'Comic Neue', cursive;
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        main {
+            flex: 1;
+            /* expand content area */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-family: 'Comic Sans MS', 'Comic Sans', 'Comic Neue', cursive;
-            color: #ffffff;
-            text-align: center;
+            padding: 2rem 1rem;
         }
 
         h1 {
@@ -43,15 +54,14 @@
         }
 
         footer {
-            margin-top: 2rem;
             font-size: 1rem;
             color: #ac2222;
             width: 100%;
             text-align: center;
             padding: 1rem 0;
             background-color: #e0e0e0;
+            margin-top: auto;
         }
-
 
         @media (max-width: 768px) {
             h1 {
@@ -62,27 +72,51 @@
                 font-size: 1.5rem;
             }
         }
+
+        #dvd {
+            position: absolute;
+            width: 160px;
+            height: 80px;
+            background-image: url("media/gabibbo_steso.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: hue-rotate(0deg) saturate(200%);
+            pointer-events: none;
+        }
     </style>
 </head>
 
 <body>
-    <h1 id="play-splash">Welcome to LeppaCasa Oy</h1>
-    <img src="/media/frittomisto.jpg" alt="Fritto Misto" id="play-buonasera">
-    <h2><i>Experience the Taste of Authentic Fritto Misto</i></h2>
-    <p id="helsinki-time">In <span id="play-striscia">Helsinki</span> it's <span id="helsinki-time-display"></span></p>
+    <div id="dvd"></div>
 
-    <footer>Built with love and <a href="https://github.com/cannox227/leppasito">Fritto Misto</a></footer>
+    <main>
+        <h1 id="play-splash">Welcome to LeppaCasa Oy</h1>
+        <img src="/media/frittomisto.jpg" alt="Fritto Misto" id="play-buonasera">
+        <h2><i>Experience the Taste of Authentic Fritto Misto</i></h2>
+        <p id="helsinki-time">In <span id="play-striscia">Helsinki</span> it's <span id="helsinki-time-display"></span>
+        </p>
+    </main>
+
+    <footer>
+        Built with love and <a href="https://github.com/cannox227/leppasito">Fritto Misto</a>
+    </footer>
+
     <audio id="audio-player-1" src="media/buonasera_gerry.mp3"></audio>
     <audio id="audio-player-2" src="media/slpash.mp3"></audio>
     <audio id="audio-player-3" src="media/striscia.mp3"></audio>
+
     <script>
+        // Update Helsinki time
         function updateHelsinkiTime() {
             const options = { timeZone: 'Europe/Helsinki', hour: '2-digit', minute: '2-digit' };
             const helsinkiTime = new Intl.DateTimeFormat('en-US', options).format(new Date());
             document.getElementById('helsinki-time-display').textContent = helsinkiTime;
         }
         updateHelsinkiTime();
+        setInterval(updateHelsinkiTime, 60000);
 
+        // Setup click-to-play audio
         function setupAudioPlayback(audioElementId, triggerElementId) {
             const audioPlayer = document.getElementById(audioElementId);
             const triggerElement = document.getElementById(triggerElementId);
@@ -91,11 +125,54 @@
                 audioPlayer.play();
             });
         }
-
         setupAudioPlayback('audio-player-1', 'play-buonasera');
         setupAudioPlayback('audio-player-2', 'play-splash');
         setupAudioPlayback('audio-player-3', 'play-striscia');
 
+        // DVD animation
+        const dvd = document.getElementById("dvd");
+        const speed = 3;
+        let x = 100, y = 100;
+        let dirX = 1, dirY = 1;
+        const dvdWidth = dvd.clientWidth;
+        const dvdHeight = dvd.clientHeight;
+
+        const hues = [0, 90, 180, 270, 45, 135, 225, 315];
+
+        function getRandomHue() {
+            return hues[Math.floor(Math.random() * hues.length)];
+        }
+
+        function animate() {
+            const sw = window.innerWidth;
+            const sh = window.innerHeight;
+            const footerHeight = document.querySelector("footer").offsetHeight;
+            const maxY = sh - footerHeight; // stop above footer
+            let bounced = false;
+
+            if (y + dvdHeight >= maxY || y <= 0) {
+                dirY *= -1;
+                bounced = true;
+            }
+            if (x + dvdWidth >= sw || x <= 0) {
+                dirX *= -1;
+                bounced = true;
+            }
+
+            if (bounced) {
+                const hue = getRandomHue();
+                dvd.style.filter = `hue-rotate(${hue}deg) saturate(200%)`;
+            }
+
+            x += dirX * speed;
+            y += dirY * speed;
+            dvd.style.left = x + "px";
+            dvd.style.top = y + "px";
+
+            requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
     </script>
 </body>
 

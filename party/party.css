@@ -1,0 +1,132 @@
+.party-page {
+    width: 100%;
+    gap: 1rem;
+    max-width: 58rem;
+    padding: 3rem 1rem;
+}
+
+.party-kicker {
+    margin: 0;
+    color: #e0e0e0;
+    font-size: 1.1rem;
+}
+
+.party-page h1 {
+    max-width: 100%;
+    margin: 0;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(5rem, 1fr));
+    gap: 0.75rem;
+    width: min(100%, 36rem);
+    margin-inline: auto;
+}
+
+.countdown div {
+    padding: 1rem 0.5rem;
+    color: #2c3e50;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+.countdown strong,
+.countdown span {
+    display: block;
+}
+
+.countdown strong {
+    font-size: 2rem;
+}
+
+.countdown span {
+    font-size: 0.9rem;
+}
+
+.event-date {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.language-switcher {
+    display: grid;
+    gap: 0.5rem;
+    justify-items: center;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.language-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.language-buttons button {
+    min-width: 2.75rem;
+    padding: 0.45rem;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-size: 1.35rem;
+    line-height: 1;
+    background: #e0e0e0;
+    cursor: pointer;
+}
+
+.language-buttons button:hover,
+.language-buttons button:focus-visible,
+.language-buttons button[aria-pressed="true"] {
+    border-color: #e0e0e0;
+    background: #ac2222;
+}
+
+.party-copy {
+    width: min(100%, 48rem);
+    margin-inline: auto;
+    padding: 1.5rem;
+    color: #2c3e50;
+    text-align: left;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.party-copy p {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.party-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.party-copy .closing {
+    color: #ac2222;
+    font-weight: 700;
+}
+
+@media (max-width: 480px) {
+    .party-page {
+        padding: 2rem 1rem;
+    }
+
+    .countdown {
+        gap: 0.35rem;
+    }
+
+    .countdown div {
+        padding: 0.75rem 0.25rem;
+    }
+
+    .countdown strong {
+        font-size: 1.5rem;
+    }
+
+    .countdown span {
+        font-size: 0.75rem;
+    }
+}

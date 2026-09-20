@@ -36,6 +36,17 @@ Honorable mención: triumvirato Prisma-Lidl-K market I love you❤️`
 Da rivedere la quantità di imprecazioni verso l’Altissimo da parte di uno dei proprietari di casa.`
     },
     {
+        name: 'il Van Aert del basso Garda',
+        connection: 'I unfortunately befriended Tommaso at some dramatic point of my life, a series of events later brought me to his house.',
+        food: 4,
+        sleep: 2,
+        neighborhood: 3,
+        hosts: 2,
+        comment: `Great quality for both vegans and heavy meat eaters. The couple who lives in the apartment has a steady, romantic relationship but extremely different eating habits, so you’ll find whatever you’ll need.
+
+Espresso quality is top notch, too.`
+    },
+    {
         name: 'Maty',
         connection: 'Tommaso and Giorgia’s friend',
         food: 5,
@@ -79,5 +90,6 @@ Super close to the train station if you need to run away from your hosts.`
         hosts: 5,
         comment: 'Great food and movies... omg italian classics'
     },
+
 
 ];

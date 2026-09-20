@@ -64,6 +64,15 @@ Bathroom is very nice and loundry service convenient and cheap.
 Super close to the train station if you need to run away from your hosts.`
     },
     {
+        name: 'Fra Tac',
+        connection: 'Gently invited by Tommaso, through a common acquaintance (Giorgia)',
+        food: 5,
+        sleep: 5,
+        neighborhood: 5,
+        hosts: 5,
+        comment: `Chef Giorgia needs a mention of honor, I still dream about the tofu pancakes. I dove deeper into Veneto and bestemmia culture, for better or worse. Found out the real meaning of cojone (not sure of the spelling). I use the expression “what’s the policy of…” way to much after my Leppacasa experience. I received a private lecture on finance, investing and obligations. Overall, I’d recommend and come back for a second round.`
+    },
+    {
         name: 'Lara',
         connection: 'Tommaso’s friend',
         food: 5,
@@ -92,4 +101,22 @@ Super close to the train station if you need to run away from your hosts.`
     },
 
 
+    {
+        name: 'Sfacc',
+        connection: 'Tommaso’s colleague',
+        food: 4,
+        sleep: null,
+        neighborhood: 3,
+        hosts: 5,
+        comment: 'I love the smart features of the apartment. Very nice terrace, perfect to {redacted}. Good and healthy food I would say. Overall, good quality/price ratio.'
+    },
+    {
+        name: 'Alty',
+        connection: 'Parpi’s friend',
+        food: 4,
+        sleep: 4,
+        neighborhood: 5,
+        hosts: 5,
+        comment: 'Che terrazzo della madonna'
+    },
 ];

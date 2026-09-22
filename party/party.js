@@ -10,7 +10,7 @@ function updateCountdown() {
     const remaining = eventDate - new Date();
 
     if (remaining <= 0) {
-        document.querySelector('.countdown').textContent = 'The fritto misto is happening now.';
+        document.querySelector('.countdown').innerHTML = 'The <a class="fritto-misto" href="https://www.youtube.com/watch?v=7DQ53W_cens">fritto misto</a> is happening now.';
         return;
     }
 

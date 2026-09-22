@@ -119,4 +119,37 @@ Super close to the train station if you need to run away from your hosts.`
         hosts: 5,
         comment: 'Che terrazzo della madonna'
     },
+    {
+        name: 'iramisu',
+        connection: 'came for the tram videos, never left',
+        food: 5,
+        sleep: 3,
+        neighborhood: 2,
+        hosts: 5,
+        comment: `Impeccable vibes. Warm atmosphere, welcoming hosts, good soundsystem. I have never had a bad food experience in this place. Would treat any butter found in the fridge with extreme caution tho. Once saw aurora from the balcony.`
+    },
+    {
+        name: 'Surry',
+        connection: 'Parpi and Tommaso’s friend',
+        food: 5,
+        sleep: null,
+        neighborhood: 3,
+        hosts: 4,
+        comment: `Leppäcaasa is that place where all poets come and gather to discuss of the world’s greatest challenges and achievements - while giving space to creativity and the fine arts.
+It’s the righteous successor to Schrute Farms.
+
+As the balcony garden turns to bloom in summer, the great green wall of basil takes over in what could be described as the best representation of an Italian stronghold abroad.
+
+Great food and hospitality overall, except for one of the hosts (Tommaso) which is never at home when you visit - as he’s probably on a bike somewhere in the middle of Finland.`
+    },
+    {
+        name: 'Caro',
+        connection: 'Here for the coffee',
+        food: 5,
+        sleep: null,
+        neighborhood: 5,
+        hosts: 1,
+        comment: `I started coming to Leppacasa for F1 and a BBQ. Somehow, it quickly escalated into tennis, volleyball games, cremini marchigiani, pizza, focaccia, beer, wine, salami, cake. At this point, not sure if we come for the sport, the friends or the food. Probably the food.
+Every visit somehow becomes a gourmet cooking gathering, with lot of fun and absolutely no regrets.`
+    },
 ];

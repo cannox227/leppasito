@@ -152,4 +152,13 @@ Great food and hospitality overall, except for one of the hosts (Tommaso) which 
         comment: `I started coming to Leppacasa for F1 and a BBQ. Somehow, it quickly escalated into tennis, volleyball games, cremini marchigiani, pizza, focaccia, beer, wine, salami, cake. At this point, not sure if we come for the sport, the friends or the food. Probably the food.
 Every visit somehow becomes a gourmet cooking gathering, with lot of fun and absolutely no regrets.`
     },
+    {
+        name: 'Toni',
+        connection: 'Parpi’s friend',
+        food: 4,
+        sleep: 2,
+        neighborhood: 5,
+        hosts: 5,
+        comment: 'Incredibile house and incredible host, unfortunately I can’t rate the food because we have always ate out, but it’s a great excuse for another experience there 😉 I will definitely suggest this accommodation for a 2 days vacation in Helsinki.'
+    },
 ];

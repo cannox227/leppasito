@@ -120,6 +120,15 @@ Super close to the train station if you need to run away from your hosts.`
         comment: 'Che terrazzo della madonna'
     },
     {
+        name: 'Beba',
+        connection: 'Tommaso’s cousin and opinionated "compagno di banco" from the middle school. ',
+        food: 5,
+        sleep: 5,
+        neighborhood: 5,
+        hosts: 5,
+        comment: 'Got the princess treatment experience with Tommaso picking me up directly at the airport 💅 then got blessed with the mystical experience of sauna + magical \{redacted\} on the terrace. Big plus the personal barista making Oat cappuccinos in the morning 😉'
+    },
+    {
         name: 'iramisu',
         connection: 'came for the tram videos, never left',
         food: 5,
@@ -161,4 +170,5 @@ Every visit somehow becomes a gourmet cooking gathering, with lot of fun and abs
         hosts: 5,
         comment: 'Incredibile house and incredible host, unfortunately I can’t rate the food because we have always ate out, but it’s a great excuse for another experience there 😉 I will definitely suggest this accommodation for a 2 days vacation in Helsinki.'
     },
+
 ];

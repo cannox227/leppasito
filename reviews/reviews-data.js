@@ -147,6 +147,15 @@ Super close to the train station if you need to run away from your hosts.`
         comment: `Bängeri food, 10/10 the best toast with butter I ever had in my entire life. Bängeri vibes with good events + company. Even tho the music choices are often times questionable, the sound system is definitely not. And the one constant: lovely hosts 💞`
     },
     {
+        name: 'Alice - The Degrees Holder',
+        connection: 'helped to fill up LeppaCasa with stuff day 0 🫡',
+        food: 4,
+        sleep: null,
+        neighborhood: 5,
+        hosts: 4,
+        comment: `Food can be questionable, but the hosts do their best to put love in whatever they make. Sauna and balcony are definitely my highlights. A lot of bestemmie, be prepared if you're Christian (and also if you believe in Jesus).`
+    },
+    {
         name: 'Surry',
         connection: 'Parpi and Tommaso’s friend',
         food: 5,

@@ -138,6 +138,15 @@ Super close to the train station if you need to run away from your hosts.`
         comment: `Impeccable vibes. Warm atmosphere, welcoming hosts, good soundsystem. I have never had a bad food experience in this place. Would treat any butter found in the fridge with extreme caution tho. Once saw aurora from the balcony.`
     },
     {
+        name: 'lászló',
+        connection: 'helped to fill up LeppaCasa with stuff day 0 🫡',
+        food: 5,
+        sleep: 1,
+        neighborhood: 2,
+        hosts: 5,
+        comment: `Bängeri food, 10/10 the best toast with butter I ever had in my entire life. Bängeri vibes with good events + company. Even tho the music choices are often times questionable, the sound system is definitely not. And the one constant: lovely hosts 💞`
+    },
+    {
         name: 'Surry',
         connection: 'Parpi and Tommaso’s friend',
         food: 5,

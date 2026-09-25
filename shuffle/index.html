@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./shuffle.css">
+    <title>LeppaCasa Shuffle</title>
+</head>
+
+<body>
+    <main class="shuffle-page">
+        <h1>Which FrittoMisto are you?</h1>
+        <p>Spin the wheel to discover the LeppäCaasa lore through a video.</p>
+        <div class="wheel-wrap" aria-hidden="true">
+            <div class="shuffle-wheel" id="shuffle-wheel"></div>
+            <span class="wheel-pointer">▼</span>
+        </div>
+        <button class="review-form-link shuffle-button" id="shuffle-button" type="button">Shuffle</button>
+        <p id="shuffle-message" aria-live="polite">Press shuffle to begin.</p>
+        <p class="video-title" id="video-title" hidden></p>
+        <a class="review-form-link understand-link" id="understand-link" href="#" target="_blank" rel="noopener" hidden>
+            Understand more
+        </a>
+        <iframe
+            class="video-frame"
+            id="video-player"
+            title="Shuffled YouTube video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            hidden></iframe>
+
+        <nav class="site-nav" aria-label="Page navigation">
+            <a href="../">Home</a>
+            <a href="../party/">Party</a>
+            <a href="../reviews/">Reviews</a>
+        </nav>
+    </main>
+
+    <script src="./shuffle.js"></script>
+</body>
+
+</html>

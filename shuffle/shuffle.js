@@ -20,6 +20,17 @@ function pickVideo(videos, random = Math.random()) {
     return videos[Math.floor(random * videos.length)];
 }
 
+function shuffleVideos(videos, random = Math.random) {
+    const shuffled = [...videos];
+
+    for (let index = shuffled.length - 1; index > 0; index -= 1) {
+        const swapIndex = Math.floor(random() * (index + 1));
+        [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+    }
+
+    return shuffled;
+}
+
 function getVideoTitle(data) {
     return typeof data?.title === 'string' ? data.title : '';
 }
@@ -30,7 +41,7 @@ function chatGptUrl(videoUrl) {
 }
 
 if (typeof module !== 'undefined') {
-    module.exports = { extractVideoId, pickVideo, getVideoTitle, chatGptUrl };
+    module.exports = { extractVideoId, pickVideo, shuffleVideos, getVideoTitle, chatGptUrl };
 }
 
 if (typeof document !== 'undefined') {
@@ -56,7 +67,7 @@ if (typeof document !== 'undefined') {
             const response = await fetch('./videos.json');
             const videos = await response.json();
             const links = Array.isArray(videos) ? videos : [];
-            const selectedLink = pickVideo(links) || '';
+            const selectedLink = shuffleVideos(links)[0] || '';
             const videoId = extractVideoId(selectedLink);
 
             if (!videoId) {

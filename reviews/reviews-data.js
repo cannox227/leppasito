@@ -188,5 +188,14 @@ Every visit somehow becomes a gourmet cooking gathering, with lot of fun and abs
         hosts: 5,
         comment: 'Incredibile house and incredible host, unfortunately I can’t rate the food because we have always ate out, but it’s a great excuse for another experience there 😉 I will definitely suggest this accommodation for a 2 days vacation in Helsinki.'
     },
+    {
+        name: 'zuppa',
+        connection: 'Parpi’s friend and co-couch owner from good old Otaniemi days',
+        food: 5,
+        sleep: 5,
+        neighborhood: 5,
+        hosts: 5,
+        comment: 'Best bed and breakfast of Finland, 5 stars. Stayed here so often I basically became part of the furniture.'
+    },
 
 ];

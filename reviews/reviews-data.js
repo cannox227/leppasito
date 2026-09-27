@@ -189,6 +189,35 @@ Every visit somehow becomes a gourmet cooking gathering, with lot of fun and abs
         comment: 'Incredibile house and incredible host, unfortunately I can’t rate the food because we have always ate out, but it’s a great excuse for another experience there 😉 I will definitely suggest this accommodation for a 2 days vacation in Helsinki.'
     },
     {
+        name: 'Olli',
+        connection: 'Invited for a 2 year birthday, stayed for the food',
+        food: 5,
+        sleep: null,
+        neighborhood: 4,
+        hosts: 5,
+        comment: "Good food with dips galore. However not all of the home decor was fitting for a 2 year old's birthday 😯"
+    },
+    {
+        name: 'Yardenush',
+        connection: "Tommaso's colleague",
+        food: 5,
+        sleep: null,
+        neighborhood: 3,
+        hosts: 5,
+        comment: `Great hosts, great hummus, great homemade focaccia.
+Felt Italian for one night.
+TV could be bigger tho.`
+    },
+    {
+        name: 'Jeff',
+        connection: 'Tommaso’s friend’s friend',
+        food: 4,
+        sleep: null,
+        neighborhood: 3,
+        hosts: 5,
+        comment: 'Great people, nice food (heard rumors they don’t do pineapple on pizza though, big minus), also didn’t get stabbed (big plus). All in all would recommend.'
+    },
+    {
         name: 'zuppa',
         connection: 'Parpi’s friend and co-couch owner from good old Otaniemi days',
         food: 5,

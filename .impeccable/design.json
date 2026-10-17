@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T13:45:53Z",
+  "title": "Design System: LeppäCaasa",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Red" },
+      "navy": { "role": "neutral", "displayName": "Navy" },
+      "offWhite": { "role": "neutral", "displayName": "Off-white" },
+      "white": { "role": "neutral", "displayName": "White" },
+      "paleSurface": { "role": "neutral", "displayName": "Pale surface" },
+      "error": { "role": "error", "displayName": "Error red" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Page heading", "purpose": "Large page titles; the gift page applies responsive sizing." },
+      "body": { "displayName": "Body and controls", "purpose": "The shared cursive stack inherited by page copy and controls." }
+    },
+    "shadows": [
+      { "name": "content-card", "value": "0 4px 10px rgba(0, 0, 0, 0.1)", "purpose": "Shared image and content-card depth." },
+      { "name": "gift-panel", "value": "0 7px 18px rgba(0, 0, 0, 0.24)", "purpose": "Gift panel and starter-jar depth." },
+      { "name": "popup", "value": "0 8px 24px rgba(0, 0, 0, 0.45)", "purpose": "Gabibbo popup depth." }
+    ],
+    "motion": [
+      { "name": "gift-button-state", "value": "color 160ms ease-out, background-color 160ms ease-out, transform 160ms ease-out", "purpose": "Gift button hover transition." }
+    ],
+    "breakpoints": [
+      { "name": "content-layout", "value": "480px" },
+      { "name": "gift-layout", "value": "520px" },
+      { "name": "site-heading", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Site navigation link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Centered, wrapping site navigation link with an inverse hover and focus treatment.",
+      "html": "<nav class=\"ds-site-nav\" aria-label=\"Page navigation\"><a href=\"#\">Reviews</a></nav>",
+      "css": ".ds-site-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 0 0 1.5rem; } .ds-site-nav a { display: inline-block; min-width: 7rem; padding: 0.7rem 1rem; color: #ffffff; text-decoration: none; background-color: #ac2222; border-radius: 999px; } .ds-site-nav a:hover, .ds-site-nav a:focus-visible { color: #2c3e50; background-color: #e0e0e0; }"
+    },
+    {
+      "name": "Gift button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary gift-page action; hover inverts its colors and lifts slightly.",
+      "html": "<button class=\"ds-gift-button\" type=\"button\">Open the jar</button>",
+      "css": ".ds-gift-button { min-height: 3.1rem; padding: 0.75rem 1rem; color: #ffffff; font: inherit; font-weight: 700; border: 0; border-radius: 999px; background: #ac2222; cursor: pointer; transition: color 160ms ease-out, background-color 160ms ease-out, transform 160ms ease-out; } .ds-gift-button:hover:not(:disabled) { color: #2c3e50; background: #ffffff; transform: translateY(-2px); } .ds-gift-button:focus-visible { outline: 3px solid #2c3e50; outline-offset: 4px; } .ds-gift-button:disabled { cursor: wait; opacity: 0.7; }"
+    },
+    {
+      "name": "Password field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Gift-page password field with a navy stroke and red focus treatment.",
+      "html": "<label class=\"ds-password-label\" for=\"ds-password\">Password</label><input class=\"ds-password-input\" id=\"ds-password\" type=\"password\" autocomplete=\"current-password\" required>",
+      "css": ".ds-password-label { font-weight: 700; } .ds-password-input { width: 100%; min-height: 3.1rem; padding: 0.75rem 0.9rem; color: #2c3e50; font: inherit; border: 2px solid #2c3e50; border-radius: 8px; background: #ffffff; caret-color: #ac2222; } .ds-password-input:focus-visible { outline: 3px solid #ac2222; outline-offset: 2px; }"
+    },
+    {
+      "name": "Gift panel",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Off-white, left-aligned content panel within the centered gift-page layout.",
+      "html": "<section class=\"ds-gift-panel\" aria-label=\"Gift panel\"><h2>State the household password</h2><p>The sourdough starter is checking the guest list.</p></section>",
+      "css": ".ds-gift-panel { width: min(100%, 42rem); padding: clamp(1.25rem, 5vw, 2.5rem); color: #2c3e50; text-align: left; background: #e0e0e0; border-radius: 12px; box-shadow: 0 7px 18px rgba(0, 0, 0, 0.24); } .ds-gift-panel h2 { margin: 0 0 0.75rem; font-size: clamp(1.5rem, 5vw, 2rem); line-height: 1.2; text-wrap: balance; } .ds-gift-panel > p { margin: 0 0 1.25rem; font-size: 1.1rem; line-height: 1.5; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Unspecified",
+    "overview": "LeppäCaasa pages use a centered layout, a navy page background, white text, and the existing Comic Sans/Comic Neue cursive stack. Red actions, pale content panels, rounded controls, and soft shadows recur across the site. The copy and imagery use the household's playful lore around sourdough and cooking, Gabibbo, and fritto misto.\n\nThe `/gift/` page carries those styles into its centered panel, form, quiz controls, and sourdough-jar illustration. Creative North Star: Unspecified.",
+    "keyCharacteristics": [
+      "Centered compositions with a navy page field.",
+      "Red actions and pale panels with rounded corners.",
+      "Comic Sans/Comic Neue typography and playful household lore."
+    ],
+    "dos": [
+      "Do keep the existing navy, red, off-white, and white palette.",
+      "Do use the current Comic Sans / Comic Neue stack and rounded controls.",
+      "Do keep the playful household voice grounded in sourdough and cooking, Gabibbo, and fritto misto."
+    ],
+    "donts": [
+      "Don't replace the incumbent visual system with a new identity or palette.",
+      "Don't replace the confirmed household lore with unrelated creative direction."
+    ]
+  }
+}

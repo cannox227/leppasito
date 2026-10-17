@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./gift.css">
+    <title>LeppäCaasa Birthday Incident</title>
+</head>
+
+<body>
+    <main class="gift-page">
+        <h1>LeppäCaasa Household Incident</h1>
+        <p class="gift-subtitle">Birthday edition. The starter has been briefed.</p>
+
+        <div class="starter-jar" aria-hidden="true">
+            <span class="jar-lid"></span>
+            <span class="starter-bubble bubble-one"></span>
+            <span class="starter-bubble bubble-two"></span>
+            <span class="starter-bubble bubble-three"></span>
+            <span class="jar-label">FEED ME</span>
+        </div>
+
+        <section class="gift-panel" id="password-gate" aria-labelledby="gate-title">
+            <h2 id="gate-title">State the household password</h2>
+            <p>The sourdough starter is checking the guest list.</p>
+            <form id="password-form">
+                <label for="gift-password">Password</label>
+                <input id="gift-password" name="password" type="password" autocomplete="current-password" required>
+                <button class="gift-button" type="submit">Open the jar</button>
+                <p class="password-error" id="password-error" role="alert" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="gift-panel quiz-panel" id="quiz" aria-label="Birthday quiz" hidden>
+            <div class="progress-row">
+                <p id="question-progress-label">Question 1 of 8</p>
+                <progress id="question-progress" aria-labelledby="question-progress-label" max="8" value="1">1 of 8</progress>
+            </div>
+            <article class="question-panel" id="question-panel">
+                <h2 id="question-prompt" tabindex="-1"></h2>
+                <div class="answer-list" id="question-answers"></div>
+            </article>
+            <section class="gift-reveal" id="gift-reveal" aria-label="Birthday gift reveal" hidden>
+                <h2 tabindex="-1">The household has reached a decision</h2>
+                <p class="reveal-copy"></p>
+                <img class="gift-photo" id="gift-photo" src="../media/gift.jpg" alt="Photo for the LeppäCaasa birthday gift">
+            </section>
+        </section>
+    </main>
+
+    <script src="./gift.js"></script>
+</body>
+
+</html>
